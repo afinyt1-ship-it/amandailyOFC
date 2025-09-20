@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Amanda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: rgb(255, 255, 255);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;        
+      gap: 20px;            
+      align-items: center;  
+    }
+
+    .menu a, .dropbtn {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 6px;
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      color: #222;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .profile img, .profile video {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h1 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #2c3e50;
+    }
+
+    /* Quote style */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+    .quote {
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 800px;
+      color: #2c3e50;
+      position: relative;
+    }
+
+    .quote::before, .quote::after {
+      content: '"';
+      font-size: 34px;
+      color: #000000;
+      vertical-align: top;
+    }
+
+    .quote p {
+      display: inline;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #34495e;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .achievement {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .achievement span {
+      display: block;
+      font-size: 22px;
+      margin-top: 8px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    /* Popup styling */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+    }
+
+    .popup-content {
+      position: relative;
+      margin: 5% auto;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .popup video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: -30px;
+      right: 0;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile img, .profile video {
+        width: 100px;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">AmandailyOFC</a>
+    </div>
+    <div class="menu">
+      <div class="dropdown">
+        <button class="dropbtn">Event</button>
+        <div class="dropdown-content">
+          <a href="detail-Kartini Fest 2025.html">Kartini Fest 2025</a>
+          <a href="detail-All In Tour Surabaya.html">All In Tour Surabaya</a>
+          <a href="detail-Merdeka Fest 2025.html">Merdeka Fest 2025</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">AirPort</button>
+        <div class="dropdown-content">
+          <a href="airport merdeka.html">Airport Merdeka</a>
+          <a href="airport kartini.html">Airport Kartini</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="tentang amanda.html" class="dropbtn">Tentang Amanda</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Profil -->
+    <div class="profile">
+      <video autoplay loop muted playsinline class="profile-video">
+        <source src="tiktok amanda.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video.
+      </video>
+      <div class="profile-info">
+        <h1>Amanda Sukma (Amanda)</h1>
+        <p>
+          Amanda Puspita Sukma Mulyadewi (lahir 17 Desember 2004, Malang) adalah anggota Generasi ke-10 JKT48 
+          yang dikenal dengan karakter tomboy serta kecintaannya pada otomotif dan musik metal. 
+          Ia pertama bergabung di Academy’s Class B pada 27 Agustus 2020, kemudian mengalami pembatalan keanggotaan pada Desember 2020, 
+          setelah itu Amanda resmi menjadi trainee kembali mulai 18 Desember 2021. 
+          Setelah kurang lebih satu tahun empat bulan masa trainee, Amanda dipromosikan menjadi member reguler pada 8 Mei 2023.
+        </p>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote">
+      <p>Aku Akan Membuat Hatimu Berdebar Kencang Seperti Lagu Dengan 1000 Bpm</p>
+    </div>
+
+    <!-- Biodata -->
+    <h2 id="tentang">Biodata</h2>
+    <div class="card">
+      <p><strong>Nama:</strong> Amanda Sukma</p>
+      <p><strong>Nama Panggilan:</strong> Amanda</p>
+      <p><strong>Tanggal Lahir:</strong> 2004</p>
+      <p><strong>Generasi:</strong> 8th Generation JKT48</p>
+      <p><strong>Golongan Darah:</strong> O</p>
+    </div>
+
+    <!-- Single -->
+    <h2>Berpartisipasi Di Single Dan Album</h2>
+    <div class="card">
+      <ul>
+        <li><a href="https://youtu.be/g2QSP2xxmkg?si=iACcvmhDtTjryvzf" target="_blank">(Single) Mirai ga Me ni Shimiru</a></li>
+        <li><a href="https://youtu.be/PYeXC8aMBaw?si=aGkt9rqmhWw2K9Un" target="_blank">(Single) Chance no Junban</a></li>
+        <li><a href="https://youtu.be/taE4wnmDHhU?si=1RACYWu3yXO3oBga" target="_blank">(Single) Seishun no Lap Time (2024 ver.)</a></li>
+        <li><a href="https://youtu.be/tIORMYBfnII?si=mrUSeyu71S6zOU5r" target="_blank">(Single) Cosmos no Kioku</a></li>
+        <li>(Album) Bokura no Eureka</li>
+        <li>(Album) Sakura no Ki ni Narou</li>
+        <li>(Album) Oboete Kudasai</li>
+        <li>(Album) Green Flash</li>
+        <li>(Album) Yume wo Shinaseru Wake ni Ikanai</li>
+      </ul>
+    </div>
+
+    <!-- Unit Song -->
+<h2>Unit Song Yang Pernah Dibawakan</h2>
+<div class="grid">
+  <div class="card achievement">
+    <a href="https://youtu.be/rvL8ECX5PvM?si=ykAy-m2dLhvrPajj" target="_blank">Manatsu No Christmas Rose</a>
+  </div>
+  <div class="card achievement">Mangekyou</div>
+  <div class="card achievement">
+    <a href="https://youtu.be/wC4h1qVCGhg?si=PYIBICMY2Z_-UKYS" target="_blank">Renai Kinshi Jourei</a>
+  </div>
+  <div class="card achievement">Onna No Ko No Dairokkan</div>
+  <div class="card achievement">Pajama Drive</div>
+  <div class="card achievement">
+    <a href="https://youtu.be/zUk-DXa91tQ?si=7MiF-byR2ygoKS_n" target="_blank">Joan of Arc di Dalam Cermin</a>
+  </div>
+  <div class="card achievement">
+    <a href="https://youtu.be/xy2MzQ99Ta8?si=sjcBjMYdluLc_MMD" target="_blank">Junjou Shugi</a>
+  </div>
+  <div class="card achievement">Nice To Meet You</div>
+  <div class="card achievement">
+    <a href="https://youtu.be/o3LjjBMsviA?si=QixQzo0yh3LqygTQ" target="_blank">Tsundere</a>
+  </div>
+  <div class="card achievement">
+    <a href="https://youtu.be/0jDXsLnockk?si=ntb17huJxZeLK8Zu" target="_blank">Glory Days</a>
+  </div>
+</div>
+
+
+    <!-- Tentang Amanda (Hashtag) -->
+    <h2>HASTAG</h2>
+    <div class="grid">
+      <div class="card achievement">#Mandutify<br><small>Belum tau artinya</small></div>
+      <div class="card achievement">#SelasAmanda<br><small>Belum tau artinya</small></div>
+    </div>
+
+    <!-- Sosial Media -->
+    <h2>Sosial Media</h2>
+    <div class="grid">
+      <div class="card achievement">
+        <a href="https://x.com/PS_AmandaJKT48" target="_blank" style="text-decoration:none; color:inherit;">
+          <img src="X.png" alt="X" style="width:40px; height:40px; margin-bottom:10px;">
+          <div>@PS_AmandaJKT48</div>
+        </a>
+      </div>
+      <div class="card achievement">
+        <a href="https://www.instagram.com/jkt48.amanda.s/" target="_blank" style="text-decoration:none; color:inherit;">
+          <img src="instagram.png" alt="Instagram" style="width:40px; height:40px; margin-bottom:10px;">
+          <div>@jkt48.amanda.s</div>
+        </a>
+      </div>
+      <div class="card achievement">
+        <a href="https://www.tiktok.com/@jkt48.amanda.s" target="_blank" style="text-decoration:none; color:inherit;">
+          <img src="tiktok.png" alt="TikTok" style="width:40px; height:40px; margin-bottom:10px;">
+          <div>@jkt48.amanda.s</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Dropdown
+    document.querySelectorAll('.dropbtn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        let dropdown = this.parentElement;
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('show');
+        });
+        dropdown.classList.toggle('show');
+      });
+    });
+    window.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+    });
+
+    // Video popup (sudah tidak dipakai di Single & Unit Song, tapi biarin aja kalau perlu)
+    function openVideo(file) {
+      let popup = document.getElementById("videoPopup");
+      let video = document.getElementById("popupVideo");
+      let source = video.querySelector("source");
+
+      source.src = file;
+      video.load();
+      popup.style.display = "block";
+      video.play();
+    }
+    function closeVideo() {
+      let popup = document.getElementById("videoPopup");
+      let video = document.getElementById("popupVideo");
+      popup.style.display = "none";
+      video.pause();
+      video.currentTime = 0;
+    }
+  </script>
+
+</body>
+</html>

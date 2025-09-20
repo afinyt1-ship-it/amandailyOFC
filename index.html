@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmandailyOFC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">AmandailyOFC</div>
+    <div class="menu">
+      <!-- Dropdown Event -->
+      <div class="dropdown">
+        <button class="dropbtn">Event</button>
+        <div class="dropdown-content">
+          <a href="detail-Kartini Fest 2025.html">Kartini Fest 2025</a>
+          <a href="detail-All In Tour Surabaya.html">All In Tour Surabaya</a>
+          <a href="detail-Merdeka Fest 2025.html">Merdeka Fest 2025</a>
+        </div>
+      </div>
+
+      <!-- Dropdown Airport -->
+<div class="dropdown">
+  <button class="dropbtn">AirPort</button>
+  <div class="dropdown-content">
+    <a href="airport merdeka.html">Airport Merdeka</a>
+    <a href="airport kartini.html">Airport Kartini</a>
+  </div>
+</div>
+
+<!-- Menu Tentang Amanda -->
+<div class="dropdown">
+  <a href="tentang amanda.html" class="dropbtn">Tentang Amanda</a>
+</div>
+  </header>
+
+  <!-- Horizontal Scroll Cards -->
+  <section class="scroll-container">
+    <div class="card">
+      <img src="kartini fest/kartini (2).jpg" alt="">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h2>Kartini Fest 2025</h2>
+        <a href="detail-Kartini Fest 2025.html"><button>See More</button></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="All in tour Surabaya/all in  (1).jpg" alt="">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h2>All In Tour Surabaya</h2>
+        <a href="detail-All In Tour Surabaya.html"><button>See More</button></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="merdeka fest/merdeka  (4).jpg" alt="">
+      <div class="overlay"></div>
+      <div class="card-content">
+        <h2>Merdeka Fest 2025</h2>
+        <a href="detail-Merdeka Fest 2025.html"><button>See More</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <img src="PP akun.jpg" alt="Profile">
+      <div class="about-text">
+        <h2>AmandailyOFC</h2>
+        <p>
+         AmandailyOFC adalah fansite yang dibuat khusus untuk mendukung Amanda JKT48. 
+         Di sini kamu bisa menemukan berbagai foto dan momen berharga, baik di atas maupun di luar panggung. 
+         Tujuan fansite ini adalah untuk mendokumentasikan perjalanan Amanda agar selalu diingat dan diapresiasi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script Dropdown -->
+  <script>
+  document.querySelectorAll('.dropbtn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      let dropdown = this.parentElement;
+
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('show');
+      });
+
+      dropdown.classList.toggle('show');
+    });
+  });
+
+  window.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+  });
+  </script>
+</body>
+</html>
